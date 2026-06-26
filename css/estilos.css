@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/* Variáveis globais */
+/* Mixins reutilizáveis */
+/* Centraliza elementos utilizando Flexbox */
+/* Estilo padrão para botões */
+/* Estilo padrão para os cards */
+/* Estilos globais */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configurações globais da página */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+}
+
+/* Tipografia */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.section {
+  padding: 2.5rem 0;
+}
+.section__title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.header__title {
+  color: #1e293b;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav__link {
+  text-decoration: none;
+  color: rgb(90, 97, 220);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.nav__link:hover {
+  color: rgb(60, 66, 180);
+  text-decoration: underline;
+}
+
+/* Botões */
+.button--primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: rgb(90, 97, 220);
+  color: #fff;
+}
+.button--primary:hover {
+  background-color: rgb(60, 66, 180);
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.card__title {
+  margin-bottom: 1rem;
+}
+.card__text {
+  line-height: 1.6;
+}
+.card--service {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card--service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.card--testimonial {
+  margin-bottom: 1rem;
+}
+
+/* Home */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 3rem 0;
+}
+.home__image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1rem;
+}
+.home__text {
+  max-width: 50rem;
+}
+
+/* Sobre */
+.about {
+  max-width: 60rem;
+  margin: auto;
+  text-align: center;
+}
+.about__text {
+  margin-bottom: 1rem;
+}
+.about__subtitle {
+  margin-top: 1.5rem;
+}
+.about__values {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.about__value {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Serviços */
+.services {
+  text-align: center;
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Depoimentos */
+.testimonials {
+  text-align: center;
+}
+
+.testimonial__author {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Contato */
+.contact {
+  text-align: center;
+}
+.contact__info {
+  margin-bottom: 0.5rem;
+}
+
+/* Formulário */
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  margin: 2rem auto;
+}
+.form__input, .form__textarea {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+.form__input:focus, .form__textarea:focus {
+  outline: none;
+  border-color: rgb(90, 97, 220);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid #d1d5db;
+}
+.footer__text {
+  color: #64748b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .section {
+    padding: 1.5rem 0;
+  }
+  .section__title {
+    font-size: 1.5rem;
+  }
+  .home__title {
+    font-size: 1.5rem;
+  }
+  .home__image {
+    border-radius: 0.75rem;
+  }
+  .home__title {
+    font-size: 1.5rem;
+  }
+  .container {
+    padding: 0.75rem;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
