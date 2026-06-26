@@ -1,0 +1,34 @@
+@use "variaveis" as *;
+
+/* Mixins reutilizáveis */
+
+/* Centraliza elementos utilizando Flexbox */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo padrão para botões */
+@mixin button($background-color) {
+    display: inline-block;
+    padding: .75rem 1.5rem;
+    border: none;
+    border-radius: $radius;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    background-color: $background-color;
+    color: $cor-branca;
+    &:hover{
+        background-color: $cor-primaria-hover;
+    }
+}
+
+/* Estilo padrão para os cards */
+@mixin card {
+    background-color: $cor-branca;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: $sombra;
+}

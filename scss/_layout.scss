@@ -1,0 +1,52 @@
+@use "sass:math";
+@use "variaveis" as *;
+@use "mixins" as *;
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.section {
+    padding: 2.5rem 0;
+
+    &__title {
+        text-align: center;
+        margin-bottom: math.div($espacamento, 2);
+    }
+}
+
+.header {
+    @include flex-center;
+
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+
+    &__title {
+        color: $cor-texto;
+    }
+}
+
+.nav {
+    &__list {
+        list-style: none;
+        display: flex;
+        gap: $espacamento;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $cor-primaria;
+        font-weight: bold;
+
+        transition: color .3s ease;
+
+        &:hover {
+            color: $cor-primaria-hover;
+            text-decoration: underline;
+        }
+    }
+}
