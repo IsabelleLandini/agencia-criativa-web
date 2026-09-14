@@ -4,7 +4,7 @@ Projeto de landing page desenvolvido com **HTML5, SASS (SCSS), CSS3 e Node.js**,
 
 ---
 
-## 📌 Sobre o projeto
+## Sobre o projeto
 
 A **Agência Criativa Web** é uma landing page fictícia criada para simular o site de uma agência digital.
 
@@ -25,19 +25,19 @@ Nesta versão do projeto foi realizada uma refatoração completa dos estilos ut
 
 ---
 
-## 🎨 Layout do projeto
+## Layout do projeto
 
 O site é composto por:
 
-* 🏠 **Home** – apresentação principal com banner e chamada para ação
-* 👩‍💼 **Sobre Nós** – descrição da agência e valores
-* 💼 **Serviços** – cards com os principais serviços oferecidos
-* 💬 **Depoimentos** – feedback de clientes fictícios
-* 📞 **Contato** – formulário e informações de contato
+*  **Home** – apresentação principal com banner e chamada para ação
+* **Sobre Nós** – descrição da agência e valores
+* **Serviços** – cards com os principais serviços oferecidos
+* **Depoimentos** – feedback de clientes fictícios
+*  **Contato** – formulário e informações de contato
 
 ---
 
-## 💻 Tecnologias e conceitos utilizados
+## Tecnologias e conceitos utilizados
 
 ### Tecnologias 
 
@@ -62,7 +62,7 @@ O site é composto por:
 
 ---
 
-## 📱 Responsividade
+## Responsividade
 
 O projeto é totalmente responsivo e se adapta a:
 
@@ -79,7 +79,9 @@ O projeto é totalmente responsivo e se adapta a:
 │ 
 ├── css/
 │     ├── estilos.css 
-│     └── estilos.css.map 
+│     ├── estilos.css.map 
+│     ├── estilos.min.css
+│     └── estilos.min.css.map
 │ 
 ├── scss/ 
 │     ├── _variaveis.scss 
@@ -92,16 +94,26 @@ O projeto é totalmente responsivo e se adapta a:
 ├── imagens/
 │     ├── banner-grande.jpg
 │     ├── banner-media.jpg
-│     └── banner-pequena.jpg
+│     ├── banner-pequena.jpg
+│     ├── banner-grande.webp 
+│     ├── banner-media.webp 
+│     └── banner-pequena.webp
+│
+├── relatorios/ 
+│     ├── lighthouse-antes.pdf 
+│     └── lighthouse-depois.pdf 
 │
 ├── index.html
+├── index.min.html
 ├── package.json
+├── package-lock.json
+├── screenshot.png
 └── README.md
 ```
 
 ---
 
-## 🚀 Como executar o projeto
+## Como executar o projeto
 
 1. Baixe ou clone o repositório:
 
@@ -133,7 +145,7 @@ Abra o arquivo `index.html` no navegador ou utilize a extensão Live Server do V
 
 ---
 
-## 🔧 Refatoração com SASS
+## Refatoração com SASS
 
 Durante esta etapa do projeto foram aplicados os principais recursos do SASS:
 
@@ -144,6 +156,50 @@ Durante esta etapa do projeto foram aplicados os principais recursos do SASS:
 * Aninhamento de seletores
 * Operadores para cálculos de espaçamento
 * Organização dos estilos em arquivos específicos
+
+---
+
+## Otimização de Performance
+
+Nesta etapa, o projeto passou por uma análise de performance utilizando o **Lighthouse**, seguida da aplicação de otimizações para melhorar o carregamento e a qualidade geral da página.
+
+### Problemas identificados
+
+Na análise inicial foram identificados principalmente:
+
+* CSS bloqueando a renderização inicial
+* Imagens com oportunidade de melhoria na entrega e no tamanho dos arquivos
+* Imagens sem dimensões explícitas
+* Ausência de descrição para SEO
+* Código HTML e CSS sem minificação
+
+### Otimizações realizadas
+
+* Conversão das imagens para **WebP**
+* Utilização de `srcset`, `sizes` e `<picture>` para fornecer imagens adequadas a diferentes tamanhos de tela
+* Definição de `width` e `height` nas imagens
+* Ajuste do CSS para preservar a proporção das imagens
+* Minificação dos arquivos HTML e CSS
+* Remoção de código CSS duplicado
+* Adição de meta description para melhorar o SEO
+* Análise do código JavaScript, que não possui código próprio no projeto e, portanto, não exigiu otimização
+* Manutenção da responsividade após as otimizações
+
+### Resultados do Lighthouse
+
+| Categoria      | Antes | Depois |
+| -------------- | ----: | -----: |
+| Performance    |   100 |    100 |
+| Accessibility  |   100 |    100 |
+| Best Practices |   100 |    100 |
+| SEO            |    91 |    100 |
+
+A pontuação de **SEO aumentou de 91 para 100**, enquanto as demais categorias mantiveram a pontuação máxima.
+
+Os relatórios completos estão disponíveis em:
+
+* [`lighthouse-antes.pdf`](./relatorios/lighthouse-antes.pdf)
+* [`lighthouse-depois.pdf`](./relatorios/lighthouse-depois.pdf)
 
 ---
 

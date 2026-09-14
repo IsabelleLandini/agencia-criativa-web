@@ -7,3 +7,6 @@ Thumbs.db
 
 # IDE
 .vscode/
+
+# Source maps gerados pelo Sass
+css/estilos.min.css.map
