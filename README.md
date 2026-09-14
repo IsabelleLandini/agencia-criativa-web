@@ -80,8 +80,7 @@ O projeto é totalmente responsivo e se adapta a:
 ├── css/
 │     ├── estilos.css 
 │     ├── estilos.css.map 
-│     ├── estilos.min.css
-│     └── estilos.min.css.map
+│     └── estilos.min.css
 │ 
 ├── scss/ 
 │     ├── _variaveis.scss 
@@ -179,6 +178,7 @@ Na análise inicial foram identificados principalmente:
 * Utilização de `srcset`, `sizes` e `<picture>` para fornecer imagens adequadas a diferentes tamanhos de tela
 * Definição de `width` e `height` nas imagens
 * Ajuste do CSS para preservar a proporção das imagens
+* Não aplicação de `loading="lazy"` na imagem principal, pois ela participa do carregamento inicial e do LCP; nesse caso o carregamento tardio poderia prejudicar a performance
 * Minificação dos arquivos HTML e CSS
 * Remoção de código CSS duplicado
 * Adição de meta description para melhorar o SEO
@@ -196,10 +196,15 @@ Na análise inicial foram identificados principalmente:
 
 A pontuação de **SEO aumentou de 91 para 100**, enquanto as demais categorias mantiveram a pontuação máxima.
 
-Os relatórios completos estão disponíveis em:
+### Comparativo dos resultados
 
-* [`lighthouse-antes.pdf`](./relatorios/lighthouse-antes.pdf)
-* [`lighthouse-depois.pdf`](./relatorios/lighthouse-depois.pdf)
+#### Antes
+
+![Resultados do Lighthouse antes das otimizações](./relatorios/lighthouse-antes.png)
+
+#### Depois
+
+![Resultados do Lighthouse depois das otimizações](./relatorios/lighthouse-depois.png)
 
 ---
 
