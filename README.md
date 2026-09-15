@@ -98,12 +98,14 @@ O projeto é totalmente responsivo e se adapta a:
 │     ├── banner-media.webp 
 │     └── banner-pequena.webp
 │
-├── relatorios/ 
-│     ├── lighthouse-antes.pdf 
-│     └── lighthouse-depois.pdf 
-│
+├── relatorios/
+│     ├── lighthouse-antes.pdf
+│     ├── lighthouse-antes.png
+│     ├── lighthouse-depois.pdf
+│     └── lighthouse-depois.png
+|
 ├── index.html
-├── index.min.html
+├── index_original.html
 ├── package.json
 ├── package-lock.json
 ├── screenshot.png
@@ -187,14 +189,26 @@ Na análise inicial foram identificados principalmente:
 
 ### Resultados do Lighthouse
 
-| Categoria      | Antes | Depois |
-| -------------- | ----: | -----: |
-| Performance    |   100 |    100 |
-| Accessibility  |   100 |    100 |
-| Best Practices |   100 |    100 |
-| SEO            |    91 |    100 |
+| Categoria | Antes | Depois |
+| --------- | ----: | -----: |
+| Performance | 100 | 100 |
+| Accessibility | 100 | 100 |
+| Best Practices | 100 | 100 |
+| SEO | 91 | 100 |
 
 A pontuação de **SEO aumentou de 91 para 100**, enquanto as demais categorias mantiveram a pontuação máxima.
+
+### Métricas de carregamento
+
+| Métrica | Antes | Depois |
+| ------- | ----: | -----: |
+| FCP | 1,1 s | 1,1 s |
+| LCP | 1,4 s | 1,3 s |
+| TBT | 0 ms | 0 ms |
+| CLS | 0 | 0 |
+| Speed Index | 1,1 s | 1,1 s |
+
+O **LCP apresentou uma melhora de 0,1 s**, passando de 1,4 s para 1,3 s após as otimizações.
 
 ### Comparativo dos resultados
 

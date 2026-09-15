@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Criativa Web</title>
+    <link rel="stylesheet" href="css/estilos.min.css">
+    <meta name="description" content="Agência Criativa Web com soluções digitais para ajudar empresas a ter presença online.">
+</head>
+<body>
+    <div class="container">
+        <header class="header"> 
+            <h1 class="header__title">Agência Criativa Web</h1>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="#home">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#depoimentos">Depoimentos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="home">
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="
+                            imagens/banner-pequena.webp 480w,
+                            imagens/banner-media.webp 768w,
+                            imagens/banner-grande.webp 1200w"
+                        sizes="(max-width: 768px) 100vw, 50vw">
+                    <img
+                        class="home__image"
+                        src="imagens/banner-grande.jpg"
+                        width="480"
+                        height="320"
+                        srcset="
+                            imagens/banner-pequena.jpg 480w,
+                            imagens/banner-media.jpg 768w,
+                            imagens/banner-grande.jpg 1200w"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        alt="Agência Criativa Web">
+                </picture>
+                <h2 class="home__title">Transformamos ideias em experiências digitais memoráveis.</h2>
+                <p class="home__text">
+                    Somos uma agência especializada em design, tecnologia e inovação.
+                    Criamos soluções digitais que conectam marcas e pessoas, unindo
+                    criatividade, estratégia e resultados.
+                </p>
+
+                <a href="#servicos" class="home__button button button--primary">Conheça nossos serviços</a>
+            </section>
+            <section id="sobre" class="about section">
+                <h2 class="about__title">Sobre Nós</h2>
+
+                <p class="about__text">
+                    A Agência Criativa Web nasceu com o propósito de ajudar empresas
+                    a fortalecer sua presença digital por meio de soluções criativas e
+                    personalizadas. Nossa equipe combina design, desenvolvimento e
+                    estratégia para criar experiências únicas e impactantes.
+                </p>
+
+                <h3 class="about__subtitle">Nossos Valores</h3>
+
+                <ul class="about__values">
+                    <li class="about__value">Criatividade</li>
+                    <li class="about__value">Inovação</li>
+                    <li class="about__value">Transparência</li>
+                    <li class="about__value">Foco no cliente</li>
+                    <li class="about__value">Excelência em cada projeto</li>
+                </ul>
+            </section>
+
+            <section id="servicos" class="services section">
+                 <h2 class="section__title">Serviços</h2>
+
+                <div class="services__grid">
+                    <article class="card card--service">
+                        <h3 class="card__title">Design Gráfico</h3>
+                        <p class="card__text">
+                            Criação de identidades visuais, materiais promocionais e peças
+                            digitais para fortalecer marcas.
+                        </p>
+                    </article>
+
+                    <article class="card card--service">
+                        <h3 class="card__title">Desenvolvimento Web</h3>
+                        <p class="card__text">
+                            Desenvolvimento de sites responsivos, landing pages e aplicações
+                            web modernas.
+                        </p>
+                    </article>
+
+                    <article class="card card--service">
+                        <h3 class="card__title">Branding</h3>
+                        <p class="card__text">
+                            Construção e posicionamento de marcas para gerar reconhecimento
+                            e autoridade no mercado.
+                        </p>
+                    </article>
+
+                    <article class="card card--service">
+                        <h3 class="card__title">UX/UI Design</h3>
+                        <p class="card__text">
+                            Projetamos interfaces intuitivas e experiências digitais
+                            centradas no usuário.
+                        </p>
+                    </article>
+
+                    <article class="card card--service">
+                        <h3 class="card__title">Marketing Digital</h3>
+                        <p class="card__text">
+                            Estratégias para ampliar a presença online e aumentar o alcance
+                            das empresas.
+                        </p>
+                    </article>
+
+                    <article class="card card--service">
+                        <h3 class="card__title">Gestão de Redes Sociais</h3>
+                        <p class="card__text">
+                            Planejamento e criação de conteúdo para engajar audiências e
+                            fortalecer marcas.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="depoimentos" class="testimonials section">
+                <h2 class="section__title">Depoimentos</h2>
+
+                <article class="card card--testimonial">
+                    <p class="testimonial__text">
+                        "A equipe superou nossas expectativas. Nosso novo site aumentou
+                        significativamente o número de clientes."
+                    </p>
+                    <h3 class="testimonial__author">Mariana Costa – CEO da Flora Boutique</h3>
+                </article>
+
+                <article class="card card--testimonial">
+                    <p class="testimonial__text">
+                        "Profissionais criativos e comprometidos. O projeto foi entregue
+                        antes do prazo e com excelente qualidade."
+                    </p>
+                    <h3 class="testimonial__author">Ricardo Almeida – Diretor da Tech Solutions</h3>
+                </article>
+
+                <article class="card card--testimonial">
+                    <p class="testimonial__text">
+                        "A nova identidade visual trouxe mais profissionalismo e
+                        fortaleceu nossa marca no mercado."
+                    </p>
+                    <h3 class="testimonial__author">Juliana Martins – Fundadora da Essenza Studio</h3>
+                </article>
+            </section>
+
+            <section id="contato" class="contact section">
+                <h2 class="section__title">Contato</h2>
+
+                <p class="contact__info"><strong>Endereço:</strong> Av. Paulista, 1500 – São Paulo, SP</p>
+                <p class="contact__info"><strong>Telefone:</strong> (11) 99999-9999</p>
+                <p class="contact__info"><strong>E-mail:</strong> contato@agenciacriativaweb.com.br</p>
+
+                <form class="form">
+                <input 
+                    class="form__input"
+                    type="text" 
+                    placeholder="Seu nome" 
+                    required>
+
+                <input 
+                    class="form__input"
+                    type="email"
+                    placeholder="Seu e-mail" 
+                    required>
+
+                <textarea
+                    class="form__textarea"
+                    placeholder="Digite sua mensagem"
+                    rows="5"
+                    required>
+                </textarea>
+
+                <button 
+                    class="button button--primary"
+                    type="submit">Enviar Mensagem</button>
+                </form>
+            </section>
+        </main>
+
+         <footer class="footer">
+             <p class="footer__text"> &copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
+         </footer>
+
+    </div>   
+</body>
+</html>
